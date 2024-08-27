@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  image: postgres9.5
+  container_name: pg_9_5
+  enviromente:
+    POSTGRES_USER: root
+    POSTGRES_PASSWORD: root
+  ports:
+    - "5437:5432"
+  volumes:
+  - ./data:/var/lib/postgresql/data
