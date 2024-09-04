@@ -1,13 +1,15 @@
 version: '3.8'
 
 services:
-  image: postgres9.5
-  container_name: pg_9-5
-  enviromente:
-    POSTGRES_USER: Postgres
-    POSTGRES_PASSWORD: root
-    POSTGRES_DB: LojaVirtualApplication
-  ports:
-    - "5437:5432"
-  volumes:
-  - ./data:/var/lib/postgresql/data
+  db:
+    image: postgres:9.5
+    container_name: pg_9-5
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: LojaVirtualApplication
+    ports:
+      - "5437:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
