@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import java.util.Objects;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,11 +27,14 @@ public class PessoaJuridica extends Pessoa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "seq_pessoa")
 	private Long id;
-	
+	@Column(nullable = false)
 	private String cnpj;
 	private String inscEstadual;
+	
 	private String inscMunicipal;
+	@Column(nullable = false)
 	private String nomeFantasia;
+	@Column(nullable = false)
 	private String razaoSocial;
 	private String categoria;
 	public String getCnpj() {

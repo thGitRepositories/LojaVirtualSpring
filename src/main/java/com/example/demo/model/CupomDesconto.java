@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Objects;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,10 +29,13 @@ public class CupomDesconto implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "seq_cupom_desconto")
 	private Long id;
 
+	@Column(nullable = false)
 	private String codeDesc;
+	
 	private BigDecimal valorRealDesc;
 	private BigDecimal valorPorcentDesc;
 	
+	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date vtDesc;
 	

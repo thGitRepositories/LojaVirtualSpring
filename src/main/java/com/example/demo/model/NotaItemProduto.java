@@ -3,6 +3,7 @@ package com.example.demo.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.ConstraintMode;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ForeignKey;
@@ -28,6 +29,7 @@ public class NotaItemProduto  implements Serializable{
 	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "seq_nota_item_produto")
 	private Long id;
 	
+	@Column(nullable = false)
 	private Double quantidade;
 	
 	@ManyToOne
