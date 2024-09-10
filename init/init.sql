@@ -1,4 +1,7 @@
-CREATE DATABASE  LojaVirtualApplication
 
+CREATE TABLE  test (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100),
+  age INTEGER
+);
 
-GRANT ALL PRIVILEGES ON DATABASE LojaVirtualApplication TO root;
