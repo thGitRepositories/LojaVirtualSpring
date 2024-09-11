@@ -36,6 +36,6 @@ public class AcessoController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         repository.deleteById(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity("Acesso Removido",HttpStatus.OK);
     }
 }
