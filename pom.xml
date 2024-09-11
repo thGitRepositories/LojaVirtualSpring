@@ -59,7 +59,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+			<!-- Certifique-se de usar a versão adequada -->
 		</dependency>
+
+
 
 		<dependency>
 			<groupId>com.zaxxer</groupId>
@@ -67,7 +70,6 @@
 			<version>5.0.1</version> <!-- ou a versão mais recente compatível -->
 		</dependency>
 
-		
 
 	</dependencies>
 
